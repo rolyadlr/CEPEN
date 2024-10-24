@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    line-height: 1.6;
+}
+/* Ajustar la posición del texto en el carrusel */
+.carousel-caption {
+    position: absolute;
+    top: 30%; /* Ajusta según el tamaño de la imagen */
+    left: 10%;
+    right: 10%;
+    text-align: left;
+    z-index: 10; /* Asegura que el texto esté por encima de la imagen */
+}
+
+/* Estilo para los títulos (grandes y rojos) */
+.carousel-caption h5 {
+    font-size: 3.5rem; /* Tamaño grande para el impacto visual */
+    font-weight: 700; /* Texto en negrita */
+    color: #e74c3c; /* Rojo vibrante */
+    text-transform: uppercase; /* Todas las letras en mayúsculas */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad sobre cualquier fondo */
+    line-height: 1.2; /* Ajuste del espacio entre líneas */
+}
+
+/* Estilo para los subtítulos (blancos y con sombra para legibilidad) */
+.carousel-caption p {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para hacer que el texto sea legible en cualquier imagen */
+    margin-top: 10px;
+}
+
+/* Botón estilizado */
+.carousel-caption a.btn-warning {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #f39c12; /* Color amarillo vibrante */
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    border-radius: 30px; /* Botón redondeado para un look más suave */
+    text-transform: uppercase;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle dimensión */
+    transition: background-color 0.3s ease;
+}
+
+.carousel-caption a.btn-warning:hover {
+    background-color: #e67e22; /* Cambiar el color al pasar el mouse */
+}
+
+/* Para pantallas más pequeñas (responsive design) */
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 2rem; /* Ajustar el tamaño del texto en pantallas pequeñas */
+    }
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+    .carousel-caption a.btn-warning {
+        font-size: 1rem;
+    }
+}
+
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    
+}
+
+#area1 h1 {
+    color: red;
+    font-size: 38px;
+    margin-left: 200px;
+    text-align: left;
+    font-weight: 800;
+}
+
+#linea-roja{
+    height: 2px;
+    background-color: red;
+    width: 15%;
+    margin-left: 140px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.carreras, .programas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:  4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 70px;
+    text-align: left;
+}
+
+.tarjeta img {
+    width: 100%;
+    width: 480px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 25px;
+}
+
+.contenido-tarjeta h2 {
+    font-size: 40px;
+    color: #333;
+    font-weight: 700;
+}
+
+.contenido-tarjeta p {
+    color: #777;
+    font-size: 30px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.contenido-tarjeta a{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* Área 2: Sección de horarios */
+#area2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título de la sección */
+#area2 h1 {
+    color: red;
+    font-size: 32px;
+    font-weight: 800;
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Línea roja debajo del título */
+#linea-roja {
+    height: 2px;
+    background-color: red;
+    width: 15%;
+    margin: 5px 0 20px 20px;
+}
+
+/* Contenedor de horarios e imagen */
+.horarios-imagen {
+    display: flex;
+    flex-wrap: wrap; /* Se adapta a pantallas pequeñas */
+    justify-content: space-between; /* Espacio entre la imagen y los horarios */
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Contenedor de los horarios */
+.horarios {
+    flex: 1;
+    max-width: 50%; /* Mantiene el 50% del ancho */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Caja de cada horario individual */
+.horario {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo del título de cada horario */
+.horario h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Texto descriptivo del horario */
+.horario p {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Texto adicional en el horario */
+.horario span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Contenedor de la imagen */
+.imagen-horario {
+    flex: 1;
+    max-width: 40%; /* La imagen ocupa el 40% */
+    text-align: right;
+}
+
+/* Imagen dentro del contenedor */
+.imagen-horario img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+}
+
+/* Colores personalizados */
+#rojo { color: #e74c2c; }
+#amarillo { color: #f6b900; }
+#celeste { color: #5293d0; }
+#verde { color: #9fce52; }
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .horarios-imagen {
+        flex-direction: column; /* Apila la imagen y los horarios */
+    }
+
+    .horarios, .imagen-horario {
+        max-width: 100%; /* Ocupa todo el ancho */
+        text-align: center; /* Centra el contenido */
+    }
+}
+
+/* Área 3: Solicita Información */
+#area3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10px;
+    background: linear-gradient(to bottom, #ffc30b, #ffe557);
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.formulario-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.formulario {
+    background-color: #e53e3e;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 550px;
+}
+
+.formulario h2 {
+    color: #373737;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.formulario .fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario .fila input {
+    width: 45%;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    margin: 0;
+    padding: 10px;
+}
+
+.checkbox input {
+    margin-right: 310px;
+
+}
+.checkbox label{
+    color: #333333; 
+    text-align: left;
+}
+
+.boton-enviar {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*texto lateral */
+.texto {
+    text-align: center;
+    padding-left: 350px;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.texto h1 {
+    font-size: 65px;
+    font-weight: bold;
+    color: black;
+    line-height: 1;
+}
+
+.texto .futuro {
+    color: #ffffff;
+}
+
+.texto .mercado {
+    color: red;
+}
