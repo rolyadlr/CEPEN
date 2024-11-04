@@ -1,77 +1,107 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+}
+#imgprincipal {
+    position: relative;
+    width: 100%;
+    text-align: left; /* Cambiar a alineación izquierda */
+    overflow: hidden;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    line-height: 1.6;
+#imgprincipal img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.8);
 }
-/* Ajustar la posición del texto en el carrusel */
-.carousel-caption {
+
+#imgprincipal .texto-principal {
     position: absolute;
-    top: 30%; /* Ajusta según el tamaño de la imagen */
-    left: 10%;
-    right: 10%;
+    top: 50%;
+    left: 5%; 
+    transform: translateY(-50%);
+    color: black;
     text-align: left;
-    z-index: 10; /* Asegura que el texto esté por encima de la imagen */
+    padding: 10px;
 }
 
-/* Estilo para los títulos (grandes y rojos) */
-.carousel-caption h5 {
-    font-size: 3.5rem; /* Tamaño grande para el impacto visual */
-    font-weight: 700; /* Texto en negrita */
-    color: #e74c3c; /* Rojo vibrante */
-    text-transform: uppercase; /* Todas las letras en mayúsculas */
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la legibilidad sobre cualquier fondo */
-    line-height: 1.2; /* Ajuste del espacio entre líneas */
+#imgprincipal h5 {
+    font-size: 3.5rem; 
+    font-weight: 900;
+    color: #d71921; 
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); 
 }
 
-/* Estilo para los subtítulos (blancos y con sombra para legibilidad) */
-.carousel-caption p {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: #ffffff;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para hacer que el texto sea legible en cualquier imagen */
-    margin-top: 10px;
+#imgprincipal p {
+    font-size: 1.5rem; /* Aumentar el tamaño de la fuente */
+    font-weight: 700;
+    color: black;
+    margin-bottom: 20px;
 }
 
-/* Botón estilizado */
-.carousel-caption a.btn-warning {
+#imgprincipal .btn-inscribete {
+    background-color: #ffd100;
+    color: rgb(255, 255, 255);
+    padding: 12px 25px; /* Ajuste de padding */
+    border-radius: 8px;
     font-size: 1.2rem;
-    font-weight: 600;
-    background-color: #f39c12; /* Color amarillo vibrante */
-    border: none;
-    padding: 10px 20px;
-    color: #ffffff;
-    border-radius: 30px; /* Botón redondeado para un look más suave */
-    text-transform: uppercase;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle dimensión */
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
     transition: background-color 0.3s ease;
 }
 
-.carousel-caption a.btn-warning:hover {
-    background-color: #e67e22; /* Cambiar el color al pasar el mouse */
+#imgprincipal .btn-inscribete:hover {
+    background-color: #ffc107;
+}
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D32F2F;
+    padding: 70px 5%; /* Incrementa el padding para hacer la franja más grande */
+    margin: 0; /* Elimina cualquier margen para que esté junto a la sección principal */
 }
 
-/* Para pantallas más pequeñas (responsive design) */
-@media (max-width: 768px) {
-    .carousel-caption h5 {
-        font-size: 2rem; /* Ajustar el tamaño del texto en pantallas pequeñas */
-    }
-    .carousel-caption p {
-        font-size: 1.2rem;
-    }
-    .carousel-caption a.btn-warning {
-        font-size: 1rem;
-    }
+.beneficios-item {
+    text-align: center;
+    color: white;
+    flex: 1;
+    padding: 0 1px; /* Añadir padding lateral para espacio entre ítems */
 }
 
+.beneficios-item img {
+    width: 80px; /* Ajusta el tamaño de los íconos */
+    height: auto;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1); /* Hace que los íconos sean blancos */
+}
+
+.beneficios-item h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.beneficios-item .highlight {
+    color: #FFD700; /* Color amarillo */
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
 section {
-    padding: 20px;
+    padding: 20px 70px;
     margin: 20px 0;
     
 }

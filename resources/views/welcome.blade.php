@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pagina principal</title>
-    <link rel="stylesheet" href="/resources/css/welcomeapp.css">
+    <link rel="stylesheet" href="/public/css/welcomeapp.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -14,42 +14,42 @@
     @include('partials/header')
 </header>
 <body>
- <!-- Primera Área: carrusel -->
- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="3000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/public/imgs/imagen1_carrusel.png" class="d-block w-100" alt="Carreras cortas, futuro sólido">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Carreras cortas, futuro sólido</h5>
-            <p>Comienza tu camino profesional hoy.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/public/imgs/imagen2_carrusel.png" class="d-block w-100" alt="Oportunidades laborales">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Oportunidades laborales</h5>
-            <p>Estudia lo que las empresas demandan.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/public/imgs/imagen3_carrusel.png" class="d-block w-100" alt="Educación de calidad">
-        <div class="carousel-caption d-none d-md-block">
-            <h5>Educación de calidad</h5>
-            <p>Formación profesional con estándares internacionales.</p>
-        </div>
-      </div>
+ <!-- Primera Área: imagen -->
+ <div id="imgprincipal">
+    <img src="/public/imgs/imagen1_carrusel.png" alt="Carreras cortas, futuro sólido">
+    <div class="texto-principal">
+        <h5>CARRERAS CORTAS, <br>
+            FUTURO SÓLIDO</h5>
+        <p>Alcanza el éxito en banca y finanzas en <br>
+         tiempo récord</p>
+        <a href="#area3" class="btn-inscribete">Inscríbete aquí</a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Siguiente</span>
-    </a>
 </div>
 
-  
+ <!-- Segunda Área: Beneficios -->
+
+ <section class="beneficios">
+    <div class="beneficios-item">
+        <img src="/public/imgs/certificado.png" alt="certificado" >
+        <h3>Certificación</h3>
+        <p class="highlight">Rápida</p>
+    </div>
+    <div class="beneficios-item">
+        <img src="/public/imgs/birrete.png" alt="licenciados">
+        <h3>Licenciados</h3>
+        <p class="highlight">por SUNEDU</p>
+    </div>
+    <div class="beneficios-item">
+        <img src="/public/imgs/salario.png" alt="bolsa" >
+        <h3>Accede a nuestra</h3>
+        <p class="highlight">bolsa laboral</p>
+    </div>
+    <div class="beneficios-item">
+        <img src="/public/imgs/conferencia.png" alt="docente">
+        <h3>Contamos con</h3>
+        <p class="highlight">docentes especializados</p>
+    </div>
+</section>
 
  <section id="area1">
         <h1 id="carreras profesionales" >CARRERAS PROFESIONALES TECNICAS</h1>

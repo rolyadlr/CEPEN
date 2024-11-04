@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEPEN</title>
-    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/public/css/header.css">
 </head>
 <body>
 <header>
@@ -19,7 +19,6 @@
                 <li><a href="{{route('paginaprincipal')}}#carreras profesionales">Carreras</a></li>
                 <li><a href="{{route('paginaprincipal')}}#programas cortos">Programas</a></li>
                 <li><a href="{{route('paginaprincipal')}}">Nosotros</a></li>
-                <li><a href="{{route('paginaprincipal')}}#footer">Servicios</a></li>
             </ul>
 
 
@@ -59,7 +58,14 @@
             <span class="bar"></span>
         </div>
         
+         <!-- Menú móvil -->
+    <ul class="nav-menu mobile">
+        <li><a href="{{ route('paginaprincipal') }}#carreras_profesionales">Carreras</a></li>
+        <li><a href="{{ route('paginaprincipal') }}#programas_cortos">Programas</a></li>
+        <li><a href="{{ route('paginaprincipal') }}">Nosotros</a></li>
+    </ul>
     </nav>
 </header>
+<script src="/public/js/header.js"></script>
 </body>
 </html>
