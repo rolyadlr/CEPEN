@@ -26,7 +26,7 @@
                         <div class="auth-buttons">
                             @guest
                                 <!-- Botón de Registro ("Solicitar Info") -->
-                                <a href="{{ route('register') }}" class="btn btn-primary">¡Solicitar info!</a>
+                                <a href="{{ route('register') }}" class="btn btn-primary">Registrate</a>
                 
                                 <!-- Botón de Inicio de Sesión -->
                                 <a href="{{ route('login') }}" class="btn btn-secondary">Iniciar Sesión</a>
