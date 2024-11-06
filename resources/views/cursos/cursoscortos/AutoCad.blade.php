@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cursos tecnicos</title>
-    <link rel="stylesheet" href="/resources/css/cursoscortos.css">
+    <link rel="stylesheet" href="/public/css/cursoscortos.css">
 </head>
 <header>
     @include('partials/header')

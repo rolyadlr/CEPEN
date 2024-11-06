@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer</title>
-    <link rel="stylesheet" href="/resources/css/footer.css">
+    <link rel="stylesheet" href="/public/css/footer.css">
 </head>
 <body>
     <footer>
@@ -24,8 +24,8 @@
             </div>
 
             <div class="social-icons">
-                <a href="#"><img src="imgs/facebook.jpg" alt="Facebook"></a>
-                <a href="#"><img src="imgs/whatsapp.jpg" alt="WhatsApp"></a>
+                <a href="#"><img src="/public/imgs/facebook.jpg" alt="Facebook"></a>
+                <a href="#"><img src="/public/imgs/whatsapp.jpg" alt="WhatsApp"></a>
             </div>
         </div>
 

@@ -58,12 +58,7 @@
             <span class="bar"></span>
         </div>
         
-         <!-- Menú móvil -->
-    <ul class="nav-menu mobile">
-        <li><a href="{{ route('paginaprincipal') }}#carreras_profesionales">Carreras</a></li>
-        <li><a href="{{ route('paginaprincipal') }}#programas_cortos">Programas</a></li>
-        <li><a href="{{ route('paginaprincipal') }}">Nosotros</a></li>
-    </ul>
+         
     </nav>
 </header>
 <script src="/public/js/header.js"></script>
