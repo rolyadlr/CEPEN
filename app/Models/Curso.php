@@ -30,4 +30,11 @@ class Curso extends Model
     {
         return $this->hasMany(Inscripcion::class, 'curso_id');
     }
+
+    // Un curso tiene muchos subcursos
+    public function subcursos()
+    {
+        return $this->hasMany(Subcurso::class, 'curso_id');
+    }
 }
+

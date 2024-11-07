@@ -114,6 +114,24 @@ body {
     font-weight: bolder;
 }
 
+.detalles-curso {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 1.2vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.highlighted {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
 .curso {
     background-color: #ffe456;
     color: black;
@@ -123,11 +141,17 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
     font-weight: bolder;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .curso:hover {
     background-color: #ff6666;
 }
+
+.curso:active {
+    background-color: #ff3333;
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -151,5 +175,15 @@ body {
     #area2 .grid-container {
         grid-template-columns: 1fr;
         gap: 20px 0px;
+    }
+    .detalles-curso {
+        font-size: 3.5vw;
+        padding: 15px;
+    }
+
+    .curso {
+        font-size: 4vw;
+        padding: 10px;
+        border-radius: 20px;
     }
 }
