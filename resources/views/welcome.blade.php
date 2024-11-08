@@ -146,23 +146,40 @@
         <div class="formulario-contenedor">
             <div class="formulario">
                 <h2>SOLICITA INFORMACIÓN</h2>
-                <form action="#">
-                    <input type="text" placeholder="Nombres" required>
-                    <input type="text" placeholder="Apellidos" required>
+                <form action="{{ route('solicitud.informacion') }}" method="POST">
+                    @csrf
+                    <input type="text" name="nombres" placeholder="Nombres" required>
+                    <input type="text" name="apellidos" placeholder="Apellidos" required>
                     <div class="fila">
-                        <input type="email" placeholder="Correo" required>
-                        <input type="tel" placeholder="Celular" required>
+                        <input type="email" name="correo" placeholder="Correo" required>
+                        <input type="tel" name="celular" placeholder="Celular" required>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="datos">
+                        <input type="checkbox" id="datos" name="acepto_datos" required>
                         <label for="datos" style="margin-top: -38px;margin-left: -80px;">Acepto el uso de mis datos</label>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="terminos">
+                        <input type="checkbox" id="terminos" name="acepto_terminos" required>
                         <label for="terminos" style="margin-top: -38px;margin-left: 32px;">Acepto haber leído las políticas de privacidad y los términos y condiciones</label>
                     </div>
                     <button type="submit" class="boton-enviar">ENVIAR</button>
                 </form>
+                @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+@if (session('mensaje'))
+    <div class="alert alert-success">
+        {{ session('mensaje') }}
+    </div>
+@endif
+
             </div>
             <div class="texto">
                 <h1>Es momento de dar un paso para <span class="futuro">tu futuro.</span></h1>

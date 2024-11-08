@@ -16,7 +16,18 @@ body {
     margin-top: 10px;
     margin-bottom: 50px;
 }
-
+.formulario-contenedor {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
 /* Modificar ancho máximo de áreas específicas */
 #area1, #area2, #area3 {
     width: 100%;

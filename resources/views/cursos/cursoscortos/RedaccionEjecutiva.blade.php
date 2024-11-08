@@ -15,7 +15,23 @@
         <p>Dirigido a: Estudiantes, emprendedores, adolecentes y empresarios. <br> Modalidad:PRESENCIAL- SEMIPRESENCIAL <br> DURACION: 2 MESES</p>
         <button type="inscripcion" class="boton-inscribirse">INSCRIBIRSE</button>
     </section>
-
+<!-- Formulario emergente -->
+<div class="formulario-contenedor" id="formularioInscripcion">
+    <div class="formulario">
+        <h2>Formulario de Inscripción</h2>
+        <input type="text" placeholder="Nombre">
+        <input type="email" placeholder="Correo electrónico">
+        <div class="fila">
+            <input type="text" placeholder="Edad">
+            <input type="text" placeholder="Teléfono">
+        </div>
+        <div class="checkbox">
+            <input type="checkbox" id="acepto">
+            <label for="acepto">Acepto los términos y condiciones</label>
+        </div>
+        <button class="boton-enviar" onclick="cerrarFormulario()">Enviar</button>
+    </div>
+</div>
     <section id="area2">
         <h1>¿QUE APRENDERAS?</h1>
         <div class="grid-container">
@@ -61,5 +77,6 @@
     <footer>
     @include('partials/footer')
 </footer>
+<script src="/public/js/cursoscortos.js"></script>
 </body>
 </html>
