@@ -32,6 +32,7 @@
 
     <section id="area3">
         <div class="cursos-titulo">CURSOS</div>
+        
         <div class="curso" onclick="toggleDetails('detalles1')" onmouseover="highlightDetails('detalles1')" onmouseout="resetHighlight('detalles1')"> FUNDAMENTOS DE AUTOCAD </div>
             <div id="detalles1" class="detalles-curso">
             <p><strong>Horas del Curso:</strong> 20 horas</p>

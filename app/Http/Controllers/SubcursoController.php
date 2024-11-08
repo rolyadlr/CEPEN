@@ -22,9 +22,16 @@ class SubcursoController extends Controller
 
     public function store(Request $request)
     {
-        $subcurso = Subcurso::create($request->all());
+        $request->validate([
+            'nombre' => 'required|string',
+            'descripcion' => 'nullable|string',
+            'curso_id' => 'required|exists:cursos,id', // Validación de curso_id
+        ]);
+    
+        Subcurso::create($request->all());
         return redirect()->route('subcursos.index');
     }
+    
 
     public function show(Subcurso $subcurso)
     {

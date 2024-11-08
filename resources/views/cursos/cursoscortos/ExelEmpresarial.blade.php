@@ -34,12 +34,40 @@
 
     <section id="area3">
         <div class="cursos-titulo">CURSOS</div>
-        <div class="curso">FUNDAMENTOS BASICOS</div>
-        <div class="curso">FUNCIONES</div>
-        <div class="curso">MATRICES DINAMICAS</div>
-        <div class="curso">GESTIONAR ORDENAMIENTO DE DATOS</div>
-        <div class="curso">DATOS DE TIEMPO Y FILTRO AVANZADOS</div>
+        <div class="curso" onclick="toggleDetails('detalles1')" onmouseover="highlightDetails('detalles1')" onmouseout="resetHighlight('detalles1')"> FUNDAMENTOS BASICOS </div>
+            <div id="detalles1" class="detalles-curso">
+            <p><strong>Horas del Curso:</strong> 20 horas</p>
+            <p><strong>Promedio Necesario para Aprobar:</strong> 70%</p>
+            <a href="/path/to/horario_fundamentos_autocad.pdf" target="_blank">Ver Horario</a>
+            <p><strong>Anuncios:</strong> Próximo examen el 20 de noviembre.</p>
+        </div>
+        
+        <div class="curso" onclick="toggleDetails('detalles2')" onmouseover="highlightDetails('detalles2')" onmouseout="resetHighlight('detalles2')"> FUNCIONES </div>        
+            <div id="detalles2" class="detalles-curso">
+            <p><strong>Horas del Curso:</strong> 25 horas</p>
+            <p><strong>Promedio Necesario para Aprobar:</strong> 75%</p>
+            <a href="/path/to/horario_dibujo_autocad.pdf" target="_blank">Ver Horario</a>
+            <p><strong>Anuncios:</strong> Taller práctico el 22 de noviembre.</p>
+        </div>
+    
+        <div class="curso" onclick="toggleDetails('detalles3')" onmouseover="highlightDetails('detalles3')" onmouseout="resetHighlight('detalles3')"> MATRICES DINAMICAS </div>        
+            <div id="detalles3" class="detalles-curso">
+            <p><strong>Horas del Curso:</strong> 30 horas</p>
+            <p><strong>Promedio Necesario para Aprobar:</strong> 80%</p>
+            <a href="/path/to/horario_modificacion_autocad.pdf" target="_blank">Ver Horario</a>
+            <p><strong>Anuncios:</strong> Proyecto final el 25 de noviembre.</p>
+        </div>
+    
+        <div class="curso" onclick="toggleDetails('detalles4')" onmouseover="highlightDetails('detalles4')" onmouseout="resetHighlight('detalles4')"> DATOS DE TIEMPO Y FILTRO AVANZADOS </div>        
+        <div id="detalles4" class="detalles-curso">
+            <p><strong>Horas del Curso:</strong> 15 horas</p>
+            <p><strong>Promedio Necesario para Aprobar:</strong> 70%</p>
+            <a href="/path/to/horario_herramientas_especiales.pdf" target="_blank">Ver Horario</a>
+            <p><strong>Anuncios:</strong> Entrega de tareas el 27 de noviembre.</p>
+        </div>
     </section>
+    
+    <script src="/public/js/cursoscortos.js"></script>
     <footer>
     @include('partials/footer')
 </footer>

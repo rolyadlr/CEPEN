@@ -1,36 +1,42 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Crear Subcurso') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    <form action="{{ route('subcursos.store') }}" method="POST">
-                        @csrf
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" name="nombre">
-                        </div>
-                        <div class="form-group">
-                            <label for="descripcion">Descripción</label>
-                            <textarea class="form-control" id="descripcion" name="descripcion"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="curso_id">Curso</label>
-                            <select class="form-control" id="curso_id" name="curso_id">
-                                @foreach ($cursos as $curso)
-                                    <option value="{{ $curso->id }}">{{ $curso->nombre }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Crear</button>
-                    </form>
+    <div class="flex items-center justify-center min-h-screen bg-gray-100">
+        <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg mx-4">
+            <form action="{{ route('subcursos.store') }}" method="POST" class="space-y-6">
+                @csrf
+                <div class="mb-4">
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('nombre') border-red-500 @enderror" value="{{ old('nombre') }}">
+                    @error('nombre')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
                 </div>
-            </div>
+
+                <div class="mb-4">
+                    <label for="descripcion" class="block text-sm font-medium text-gray-700">Descripción</label>
+                    <textarea name="descripcion" id="descripcion" rows="4" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('descripcion') border-red-500 @enderror">{{ old('descripcion') }}</textarea>
+                    @error('descripcion')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="mb-4">
+                    <label for="curso_id" class="block text-sm font-medium text-gray-700">Curso</label>
+                    <select id="curso_id" name="curso_id" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('curso_id') border-red-500 @enderror">
+                        @foreach ($cursos as $curso)
+                            <option value="{{ $curso->id }}" {{ old('curso_id') == $curso->id ? 'selected' : '' }}>{{ $curso->nombre }}</option>
+                        @endforeach
+                    </select>
+                    @error('curso_id')
+                        <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                    @enderror
+                </div>
+
+                <div class="flex justify-end">
+                    <button type="submit" class="inline-flex items-center px-4 py-2 bg-red-600 border border-transparent rounded-md font-semibold text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        Crear
+                    </button>
+                </div>
+            </form>
         </div>
     </div>
 </x-app-layout>

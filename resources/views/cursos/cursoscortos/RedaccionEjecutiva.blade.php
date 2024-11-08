@@ -33,10 +33,31 @@
 
     <section id="area3">
         <div class="cursos-titulo">CURSOS</div>
-        <div class="curso">FUNFAMENTOS Y ESTILO DE LA REDACCION EJECUTIVA</div>
-        <div class="curso">ESTRUCTURA Y ORGANIZACION DE DOCUMENTOS EJECUTIVOS</div>
-        <div class="curso">PRODUCCION Y REVISION DE DOCUMENTOS EJECUTIVOS</div>
+        <div class="curso" onclick="toggleDetails('detalles1')" onmouseover="highlightDetails('detalles1')" onmouseout="resetHighlight('detalles1')"> FUNFAMENTOS Y ESTILO DE LA REDACCION EJECUTIVA </div>
+            <div id="detalles1" class="detalles-curso">
+            <p><strong>Horas del Curso:</strong> 20 horas</p>
+            <p><strong>Promedio Necesario para Aprobar:</strong> 70%</p>
+            <a href="/path/to/horario_fundamentos_autocad.pdf" target="_blank">Ver Horario</a>
+            <p><strong>Anuncios:</strong> Próximo examen el 20 de noviembre.</p>
+        </div>
+        
+        <div class="curso" onclick="toggleDetails('detalles2')" onmouseover="highlightDetails('detalles2')" onmouseout="resetHighlight('detalles2')"> ESTRUCTURA Y ORGANIZACION DE DOCUMENTOS EJECUTIVOS </div>        
+            <div id="detalles2" class="detalles-curso">
+            <p><strong>Horas del Curso:</strong> 25 horas</p>
+            <p><strong>Promedio Necesario para Aprobar:</strong> 75%</p>
+            <a href="/path/to/horario_dibujo_autocad.pdf" target="_blank">Ver Horario</a>
+            <p><strong>Anuncios:</strong> Taller práctico el 22 de noviembre.</p>
+        </div>
+    
+        <div class="curso" onclick="toggleDetails('detalles3')" onmouseover="highlightDetails('detalles3')" onmouseout="resetHighlight('detalles3')"> PRODUCCION Y REVISION DE DOCUMENTOS EJECUTIVOS </div>        
+            <div id="detalles3" class="detalles-curso">
+            <p><strong>Horas del Curso:</strong> 30 horas</p>
+            <p><strong>Promedio Necesario para Aprobar:</strong> 80%</p>
+            <a href="/path/to/horario_modificacion_autocad.pdf" target="_blank">Ver Horario</a>
+            <p><strong>Anuncios:</strong> Proyecto final el 25 de noviembre.</p>
+        </div>
     </section>
+    <script src="/public/js/cursoscortos.js"></script>
     <footer>
     @include('partials/footer')
 </footer>

@@ -1,24 +1,18 @@
-function showDetails(id) {
-    document.getElementById(id).style.display = 'block';
-}
-
-function hideDetails(id) {
-    document.getElementById(id).style.display = 'none';
-}
-
 function toggleDetails(id) {
-    var element = document.getElementById(id);
-    if (element.style.display === 'block') {
-        element.style.display = 'none';
+    var details = document.getElementById(id);
+    if (details.style.display === "none" || details.style.display === "") {
+        details.style.display = "block";
     } else {
-        element.style.display = 'block';
+        details.style.display = "none";
     }
 }
 
 function highlightDetails(id) {
-    document.getElementById(id).classList.add('highlighted');
+    var details = document.getElementById(id);
+    details.classList.add("highlighted");
 }
 
 function resetHighlight(id) {
-    document.getElementById(id).classList.remove('highlighted');
+    var details = document.getElementById(id);
+    details.classList.remove("highlighted");
 }
