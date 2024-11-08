@@ -6,6 +6,11 @@ use App\Http\Controllers\cursoprofesional;
 use App\Http\Controllers\cursocorto;
 use App\Http\Controllers\SubcursoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SolicitudController;
+
+
+
+Route::post('/solicitar-informacion', [SolicitudController::class, 'procesarFormulario'])->name('solicitud.informacion');
 
 // Rutas públicas
 Route::get('/', [HomeController::class, 'index'])->name('paginaprincipal');
