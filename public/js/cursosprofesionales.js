@@ -22,3 +22,12 @@ function highlightDetails(id) {
 function resetHighlight(id) {
     document.getElementById(id).classList.remove('highlighted');
 }
+// Función para mostrar el formulario emergente
+function mostrarFormulario() {
+    document.getElementById("formularioInscripcion").style.display = "flex";
+}
+
+// Función para cerrar el formulario emergente
+function cerrarFormulario() {
+    document.getElementById("formularioInscripcion").style.display = "none";
+}
