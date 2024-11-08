@@ -12,8 +12,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->web([
-            CheckRole::class, // Asegúrate de que CheckRole esté en el grupo web
+        // Registrar el middleware global
+        $middleware->web();
+        
+        // Registrar el middleware con alias
+        $middleware->alias([
+            'checkrole' => \App\Http\Middleware\CheckRole::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

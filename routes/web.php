@@ -17,18 +17,17 @@ Route::get('/curso/AutoCad', [cursocorto::class, 'AutoCad'])->name('AutoCad');
 Route::get('/curso/ExelEmpresarial', [cursocorto::class, 'ExelEmpresarial'])->name('ExelEmpresarial');
 Route::get('/curso/RedaccionEjecutiva', [cursocorto::class, 'RedaccionEjecutiva'])->name('RedaccionEjecutiva');
 
-Route::middleware(['auth', 'role:admin|docente'])->group(function () {
+// Rutas protegidas para admin y docente
+Route::middleware(['auth', 'checkrole:admin,docente'])->group(function () {
     Route::get('/dashboard', function () {
-        return redirect()->route('subcursos.index');
+        return view('dashboard');
     })->name('dashboard');
 
     // Rutas para CRUD de subcursos
     Route::resource('subcursos', SubcursoController::class);
 });
 
-
-
-// Rutas accesibles para usuarios autenticados, como perfil
+// Rutas de perfil
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
