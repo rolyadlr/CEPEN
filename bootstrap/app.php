@@ -13,11 +13,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->web([
-            'role' => CheckRole::class,
+            CheckRole::class, // Asegúrate de que CheckRole esté en el grupo web
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
-
-

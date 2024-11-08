@@ -13,7 +13,7 @@
                     <div class="mt-4">
                         <a href="{{ route('subcursos.index') }}" class="text-blue-500 hover:text-blue-700">
                             Gestionar Subcursos
-                        </a>
+                        </a>    
                     </div>
                 </div>
             </div>
