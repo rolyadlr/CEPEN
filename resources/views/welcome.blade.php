@@ -15,18 +15,36 @@
     @include('partials/header')
 </header>
 <body>
- <!-- Primera Área: imagen -->
- <div id="imgprincipal">
-    <img src="/public/imgs/imagen1_carrusel.png" alt="Carreras cortas, futuro sólido">
-    <div class="texto-principal">
-        <h5>CARRERAS CORTAS, <br>
-            FUTURO SÓLIDO</h5>
-        <p>Alcanza el éxito en banca y finanzas en <br>
-         tiempo récord</p>
-        <a href="#area3" class="btn-inscribete">Inscríbete aquí</a>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="/public/imgs/imagen1_carrusel.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/public/imgs/imagen2_carrusel.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="/public/imgs/imagen3_carrusel.png" alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    
+        <!-- Texto y botón estáticos -->
+        <div class="carousel-caption-static">
+            <h5>CARRERAS CORTAS,<br> FUTURO SÓLIDO</h5>
+            <p>Alcanza el éxito en banca y finanzas en tiempo récord</p>
+            <a class="style" href="#area3" class="btn btn-warning">Inscríbete aquí</a>
+        </div>
     </div>
-</div>
-
+    
+ 
  <!-- Segunda Área: Beneficios -->
 
  <section class="beneficios">
@@ -51,6 +69,8 @@
         <p class="highlight">docentes especializados</p>
     </div>
 </section>
+
+ <!-- CARRERAS -->
 
  <section id="area1">
         <h1 id="carreras profesionales" >CARRERAS PROFESIONALES TECNICAS</h1>
@@ -81,6 +101,8 @@
                 </div>
             </div>
         </div>
+
+         <!-- PROGRAMAS -->
 
         <h1 id="programas cortos" >PROGRAMAS TECNICOS</h1>
         <div id="linea-roja"></div>
