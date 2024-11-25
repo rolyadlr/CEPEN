@@ -30,7 +30,7 @@ class SolicitudController extends Controller
             'celular' => Hash::make($validatedData['celular']),
         ];
 
-        // guardar los datos en la base de datos o enviarlos por correo electrónico
+        // guardar los datos en la base de datos y enviarlos por correo electrónico
         Solicitud::create($datosEncriptados);
         Mail::to($validatedData['correo'])->send(new SolicitudRecibida($datosEncriptados));
         // Retornar una respuesta de éxito
