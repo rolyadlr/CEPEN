@@ -5,7 +5,7 @@
                 @csrf
                 <div class="mb-4">
                     <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('nombre') border-red-500 @enderror" value="{{ old('nombre') }}">
+                    <input type="text" name="nombre" id="nombre" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('nombre') @enderror" value="{{ old('nombre') }}">
                     @error('nombre')
                         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                     @enderror
@@ -13,7 +13,7 @@
 
                 <div class="mb-4">
                     <label for="descripcion" class="block text-sm font-medium text-gray-700">Descripción</label>
-                    <textarea name="descripcion" id="descripcion" rows="4" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('descripcion') border-red-500 @enderror">{{ old('descripcion') }}</textarea>
+                    <textarea name="descripcion" id="descripcion" rows="4" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('descripcion') @enderror">{{ old('descripcion') }}</textarea>
                     @error('descripcion')
                         <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                     @enderror
@@ -21,7 +21,7 @@
 
                 <div class="mb-4">
                     <label for="curso_id" class="block text-sm font-medium text-gray-700">Curso</label>
-                    <select id="curso_id" name="curso_id" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('curso_id') border-red-500 @enderror">
+                    <select id="curso_id" name="curso_id" class="mt-1 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md @error('curso_id') @enderror">
                         @foreach ($cursos as $curso)
                             <option value="{{ $curso->id }}" {{ old('curso_id') == $curso->id ? 'selected' : '' }}>{{ $curso->nombre }}</option>
                         @endforeach
