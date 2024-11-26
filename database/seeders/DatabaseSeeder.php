@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Usuario;  // Cambiado de User a Usuario
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,13 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-        $this->call(CursoSeeder::class);
-        $this->call([
-            SubcursoSeeder::class,
-            // Otros seeders si tienes
-        ]);
-        User::factory()->create([
+        // Usuario::factory(10)->create();
+
+        Usuario::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
