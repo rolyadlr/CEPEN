@@ -12,7 +12,7 @@ class CreateProgramasTable extends Migration
             $table->id();
             $table->string('nombre', 100);
             $table->text('descripcion')->nullable();
-            $table->integer('duracion_mes');
+            $table->integer('duracion');
             $table->timestamps();
         });
     }

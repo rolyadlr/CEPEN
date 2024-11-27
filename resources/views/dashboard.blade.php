@@ -10,11 +10,6 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
-                    <div class="mt-4">
-                        <a href="{{ route('subcursos.index') }}" class="text-blue-500 hover:text-blue-700">
-                            Gestionar Subcursos
-                        </a>    
-                    </div>
                 </div>
             </div>
         </div>

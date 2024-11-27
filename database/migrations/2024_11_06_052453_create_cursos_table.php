@@ -12,7 +12,7 @@ class CreateCursosTable extends Migration
             $table->id();
             $table->string('nombre', 100);
             $table->text('descripcion')->nullable();
-            $table->integer('duracion_mes');
+            $table->integer('duracion');
             $table->foreignId('programa_id')->nullable()->constrained('programas')->onDelete('set null');
             $table->foreignId('carrera_id')->nullable()->constrained('carreras')->onDelete('set null');
             $table->timestamps();

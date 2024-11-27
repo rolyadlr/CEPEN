@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class cursoprofesional extends Controller
+class carreraprofesional extends Controller
 {
     public function AdministracionBancaria(){
         return view('/cursos/cursosprofesionales/AdministracionBancaria');
