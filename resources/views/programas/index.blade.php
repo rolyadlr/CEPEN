@@ -47,7 +47,7 @@
                             <td>{{ $programa->duracion }} meses</td>
                             <td>{{ $programa->cursos_count }}</td>
                             <td>
-                                <a href="{{ route('programas.index', $programa) }}" class="btn btn-primary">Ver</a> 
+                                <a href="{{ $programa->ruta }}" class="btn btn-primary">Ver</a>
                                 <a href="{{ route('programas.edit', $programa) }}" class="btn btn-secondary">Modificar</a>
                             </td>
                         </tr>

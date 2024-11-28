@@ -6,17 +6,18 @@ use Illuminate\Http\Request;
 
 class carreraprofesional extends Controller
 {
-    public function AdministracionBancaria(){
-        return view('/cursos/cursosprofesionales/AdministracionBancaria');
-        }
-
-
-    public function CajeroBancario(){
+    public function CajeroBancario()
+    {
         return view('/cursos/cursosprofesionales/CajeroBancario');
-        }
+    }
 
-    
-    public function GestiondeNegocios(){
+    public function AdministracionBancaria()
+    {
+        return view('/cursos/cursosprofesionales/AdministracionBancaria');
+    }
+
+    public function GestiondeNegocios()
+    {
         return view('/cursos/cursosprofesionales/GestiondeNegocios');
-        }
+    }
 }

@@ -21,8 +21,21 @@ class ProgramaController extends Controller
             $query->orderBy($request->sort, $request->order);
         }
 
-        // Paginación
-        $programas = $query->withCount('cursos')->paginate(10);
+       // Obtener las carreras
+       $programas = $query->withCount('cursos')->get();
+    
+       // Agregar rutas dinámicas a cada carrera
+       foreach ($programas as $programa) {
+           if ($programa->nombre === 'AutoCAD') {
+               $programa->ruta = route('AutoCad');
+           } elseif ($programa->nombre === 'Excel Empresarial') {
+               $programa->ruta = route('ExelEmpresarial');
+           } elseif ($programa->nombre === 'Redacción Ejecutiva') {
+               $programa->ruta = route('RedaccionEjecutiva');
+           } else {
+               $programa->ruta = route('carreras.index'); // Ruta por defecto para casos no contemplados
+           }
+       }
         return view('programas.index', compact('programas'));
 
     }

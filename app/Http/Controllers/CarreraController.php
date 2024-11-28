@@ -21,8 +21,21 @@ class CarreraController extends Controller
             $query->orderBy($request->sort, $request->order);
         }
     
-        // Paginación
-        $carreras = $query->withCount('cursos')->paginate(10);
+        // Obtener las carreras
+        $carreras = $query->withCount('cursos')->get();
+    
+        // Agregar rutas dinámicas a cada carrera
+        foreach ($carreras as $carrera) {
+            if ($carrera->nombre === 'Administración Bancaria') {
+                $carrera->ruta = route('AdministracionBancaria');
+            } elseif ($carrera->nombre === 'Cajero Bancario y Comercial') {
+                $carrera->ruta = route('CajeroBancario');
+            } elseif ($carrera->nombre === 'Gestión de Negocios') {
+                $carrera->ruta = route('GestiondeNegocios');
+            } else {
+                $carrera->ruta = route('carreras.index'); // Ruta por defecto para casos no contemplados
+            }
+        }
     
         return view('carreras.index', compact('carreras'));
     }
@@ -33,7 +46,6 @@ class CarreraController extends Controller
     public function update(Request $request, Carrera $carrera)
     {
         $request->validate([
-            'nombre' => 'required|string|max:255',
             'descripcion' => 'required|string',
             'duracion' => 'required|integer',
         ]);

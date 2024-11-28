@@ -47,7 +47,7 @@
                             <td>{{ $carrera->duracion }} meses</td>
                             <td>{{ $carrera->cursos_count }}</td>
                             <td>
-                                <a href="{{ route('carreras.index', $carrera) }}" class="btn btn-primary">Ver</a>
+                                <a href="{{ $carrera->ruta }}" class="btn btn-primary">Ver</a>
                                 <a href="{{ route('carreras.edit', $carrera) }}" class="btn btn-secondary">Modificar</a>
                             </td>
                         </tr>
