@@ -8,16 +8,16 @@ class carreraprofesional extends Controller
 {
     public function CajeroBancario()
     {
-        return view('/cursos/cursosprofesionales/CajeroBancario');
+        return view('/cursos/carrerasprofesionales/CajeroBancario');
     }
 
     public function AdministracionBancaria()
     {
-        return view('/cursos/cursosprofesionales/AdministracionBancaria');
+        return view('/cursos/carrerasprofesionales/AdministracionBancaria');
     }
 
     public function GestiondeNegocios()
     {
-        return view('/cursos/cursosprofesionales/GestiondeNegocios');
+        return view('/cursos/carrerasprofesionales/GestiondeNegocios');
     }
 }

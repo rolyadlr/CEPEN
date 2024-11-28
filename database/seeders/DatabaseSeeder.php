@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Usuario;  // Cambiado de User a Usuario
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,11 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Usuario::factory(10)->create();
-
-        Usuario::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        // Llamar a otros seeders
+        $this->call([
+            CarreraSeeder::class,
+            ProgramaSeeder::class,
+            RolesAndPermissionsSeeder::class,
+            UsuarioSeeder::class,
+            CursoSeeder::class
         ]);
     }
 }

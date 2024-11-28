@@ -165,6 +165,24 @@ body {
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
+.admin-actions {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.boton-admin {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton-admin:hover {
+    background-color: #0056b3;
+    color: white;
+}
 
 /* Media Queries */
 @media (max-width: 1100px) {

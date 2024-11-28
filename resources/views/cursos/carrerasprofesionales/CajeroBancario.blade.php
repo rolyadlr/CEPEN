@@ -45,6 +45,9 @@
     </section>
 
     <section id="area3">
+        <div class="admin-actions">
+            <a href="{{ route('cursos.index') }}" class="boton-admin">Administrar Cursos</a>
+        </div>
         <div class="cursos-titulo">CURSOS</div>
         <div class="curso" onclick="toggleDetails('detalles1')" onmouseover="highlightDetails('detalles1')" onmouseout="resetHighlight('detalles1')"> INTRODUCCION AL SISTEMA FINANCIERO </div>
             <div id="detalles1" class="detalles-curso">

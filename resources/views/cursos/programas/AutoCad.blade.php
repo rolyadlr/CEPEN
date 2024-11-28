@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cursos tecnicos</title>
-    <link rel="stylesheet" href="/public/css/cursoscortos.css">
+    <link rel="stylesheet" href="/public/css/programas.css">
 </head>
 <header>
     @include('partials/header')
@@ -47,6 +47,9 @@
     </section>
 
     <section id="area3">
+        <div class="admin-actions">
+            <a href="{{ route('cursos.index') }}" class="boton-admin">Administrar Cursos</a>
+        </div>
         <div class="cursos-titulo">CURSOS</div>
         
         <div class="curso" onclick="toggleDetails('detalles1')" onmouseover="highlightDetails('detalles1')" onmouseout="resetHighlight('detalles1')"> FUNDAMENTOS DE AUTOCAD </div>

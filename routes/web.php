@@ -7,6 +7,7 @@ use App\Http\Controllers\programas;
 use App\Http\Controllers\SolicitudController;
 use App\Http\Controllers\CarreraController;
 use App\Http\Controllers\ProgramaController;
+use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta para procesar formularios de información
@@ -45,7 +46,7 @@ Route::put('/carreras/{carrera}', [CarreraController::class, 'update'])->name('c
 Route::get('/programas/{programa}/edit', [ProgramaController::class, 'edit'])->name('programas.edit');
 Route::put('/programas/{programa}', [ProgramaController::class, 'update'])->name('programas.update');
 
-
+Route::resource('cursos', CursoController::class);
 
 // **Rutas de perfil**
 Route::middleware('auth')->group(function () {
