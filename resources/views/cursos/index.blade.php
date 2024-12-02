@@ -1,10 +1,11 @@
 <x-app-layout>
     @section('content')
     <div class="container-fluid mt-6" style="max-width: 90%; margin: auto;">
-        <p class="h1 text-center">Administración de Cursos</p>
-        
+        <p class="h1 text-center mt-6 mb-6">Administración de Cursos</p>
+        @auth
+        @if(auth()->user()->tieneRol(['admin']))
         <a href="{{ route('cursos.create') }}" class="btn btn-primary mb-3 mt-6">Añadir Nuevo Curso</a>
-    
+        @endif @endauth
         @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
@@ -39,11 +40,14 @@
                         </td>
                         <td>
                             <a href="{{ route('cursos.edit', ['curso' => $curso->id]) }}" class="btn btn-warning me-2">Editar</a>
+                            @auth
+                            @if(auth()->user()->tieneRol(['admin']))
                             <form action="{{ route('cursos.destroy', ['curso' => $curso->id]) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Eliminar</button>
                             </form>
+                            @endif @endauth
                         </td>
                     </tr>
                 @endforeach

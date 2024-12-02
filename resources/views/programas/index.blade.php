@@ -39,7 +39,10 @@
                                 <td>{{ $programa->cursos_count }}</td>
                                 <td>
                                     <a href="{{ $programa->ruta }}" class="btn btn-primary me-2">Ver</a>
-                                    <a href="{{ route('programas.edit', $programa) }}" class="btn btn-secondary me-2">Modificar</a>
+                                    @auth
+                                    @if(auth()->user()->tieneRol(['admin']))
+                                    <a href="{{ route('carreras.edit', $programa) }}" class="btn btn-secondary me-2">Modificar</a>
+                                    @endif @endauth
                                 </td>
                             </tr>
                         @empty

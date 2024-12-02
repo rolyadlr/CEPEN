@@ -33,7 +33,7 @@ class CarreraController extends Controller
             } elseif ($carrera->nombre === 'Gestión de Negocios') {
                 $carrera->ruta = route('GestiondeNegocios');
             } else {
-                $carrera->ruta = route('carreras.index'); // Ruta por defecto para casos no contemplados
+                $carrera->ruta = route('carreras.index'); // Ruta por defecto para casos no encontrados
             }
         }
     

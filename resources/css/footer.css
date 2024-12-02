@@ -42,12 +42,11 @@ footer {
     font-weight: lighter;
 }
 
-/* Frase */
 .phrase p {
     font-size: 22px;
     text-align: center;
     margin: 10px 0;
-    max-width: 90%; /* Evita que se salga del contenedor */
+    max-width: 90%; 
 }
 
 /* Información de contacto */

@@ -54,7 +54,11 @@
 
         <section id="area3">
             <div class="admin-actions">
-                <a href="{{ route('cursos.index') }}" class="boton-admin">Administrar Cursos</a>
+                @auth
+                    @if(auth()->user()->tieneRol(['admin', 'docente']))
+                        <a href="{{ route('cursos.index') }}" class="boton-admin">Administrar Cursos</a>
+                    @endif
+                @endauth
             </div>
             <div class="cursos-titulo">Cursos Relacionados con AutoCad</div>
     @foreach ($cursos as $curso)

@@ -59,7 +59,7 @@ class CursoController extends Controller
             ->with('success', 'Curso creado exitosamente.');
     }
     
-    // Añadir el método edit
+    //método edit
     public function edit($id)
     {
         $curso = Curso::find($id);
@@ -73,7 +73,7 @@ class CursoController extends Controller
         return view('cursos.edit', compact('curso', 'programas', 'carreras'));
     }
 
-    // Similar cambio en el método update()
+    // método update()
     public function update(Request $request, Curso $curso)
     {
         $validatedData = $request->validate([
@@ -207,7 +207,7 @@ class CursoController extends Controller
     public function showCarrera($slug)
     {
         $carrera = Carrera::where('slug', $slug)->firstOrFail();
-        $cursos = $carrera->cursos; // Aquí asumo que la relación de "cursos" está definida en el modelo Carrera
+        $cursos = $carrera->cursos; 
     
         return view('cursos/carrerasprofesionales/' . $slug, compact('carrera', 'cursos'));
     }
@@ -215,11 +215,9 @@ class CursoController extends Controller
 
 public function showPrograma($slug)
 {
-    // Buscar el programa por el slug
     $programa = Programa::where('slug', $slug)->firstOrFail();
-    $cursos = $programa->cursos; // Aquí asumo que la relación de "cursos" está definida en el modelo Carrera
+    $cursos = $programa->cursos; 
 
-    // Retornar la vista, asegurando que el nombre de la vista es correcto
     return view('cursos/programas/' . $slug, compact('programa', 'cursos'));
 }
 

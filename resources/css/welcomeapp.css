@@ -21,7 +21,7 @@
     color: white;
     padding: 20px;
     border-radius: 10px;
-    z-index: 10; /* Asegura que el texto esté sobre las imágenes del carrusel */
+    z-index: 10; 
 }
 
 .carousel-caption-static h5 {
@@ -51,39 +51,39 @@
 }
 @media (max-width: 1125px) {
     .carousel-caption-static h5 {
-        font-size: 3vw; /* Ajuste del tamaño de fuente para pantallas medianas */
+        font-size: 3vw;
     }
 
     .carousel-caption-static p {
-        font-size: 2vw; /* Ajuste del tamaño de fuente para pantallas medianas */
+        font-size: 2vw; 
     }
 
     .style {
-        font-size: 1rem; /* Ajuste del tamaño del botón para pantallas medianas */
-        padding: 4px 8px; /* Ajuste del padding del botón */
+        font-size: 1rem; 
+        padding: 4px 8px; 
     }
 
     .carousel-caption-static {
-        padding: 7px; /* Ajuste del padding del texto */
+        padding: 7px; 
     }
 }
 
 @media (max-width: 412px) {
     .carousel-caption-static h5 {
-        font-size: 4vw; /* Ajuste del tamaño de fuente para pantallas pequeñas */
+        font-size: 4vw;
     }
 
     .carousel-caption-static p {
-        font-size: 2vw; /* Ajuste del tamaño de fuente para pantallas pequeñas */
+        font-size: 2vw; 
     }
 
     .style {
-        font-size: 0.9rem; /* Ajuste del tamaño del botón para pantallas pequeñas */
-        padding: 4px 8px; /* Ajuste del padding del botón */
+        font-size: 0.9rem;
+        padding: 4px 8px; 
     }
 
     .carousel-caption-static {
-        padding: 10px; /* Ajuste del padding del texto */
+        padding: 10px; 
     }
 }
 .beneficios {
@@ -93,23 +93,23 @@
     background-color: #D32F2F;
     padding: 70px 5%;
     margin: 0;
-    flex-wrap: wrap; /* Permitir que los ítems se distribuyan en múltiples filas */
+    flex-wrap: wrap;
 }
 
 .beneficios-item {
     text-align: center;
     color: white;
-    flex: 1 1 23%; /* Flexbox para distribuir 4 ítems en cada fila en pantallas grandes */
-    padding: 10px; /* Añadir padding */
-    box-sizing: border-box; /* Incluir padding en el tamaño total */
-    margin: 10px 0; /* Añadir margen vertical */
+    flex: 1 1 23%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    margin: 10px 0;
 }
 
 .beneficios-item img {
-    width: 80px; /* Ajustar el tamaño de los íconos */
+    width: 80px; 
     height: auto;
     margin-bottom: 10px;
-    filter: brightness(0) invert(1); /* Hacer que los íconos sean blancos */
+    filter: brightness(0) invert(1); 
 }
 
 .beneficios-item h3 {
@@ -119,7 +119,7 @@
 }
 
 .beneficios-item .highlight {
-    color: #FFD700; /* Color amarillo */
+    color: #FFD700; 
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -163,14 +163,14 @@
 
 
 section {
-    padding: 20px 5%; /* Ajustar padding para adaptarse mejor a diferentes tamaños de pantalla */
+    padding: 20px 5%; 
     margin: 20px 0;
 }
 
 #area1 h1 {
     color: red;
-    font-size: 2.5rem; /* Ajustar tamaño de fuente */
-    margin-left: 5%; /* Utilizar unidades relativas para margen */
+    font-size: 2.5rem;
+    margin-left: 5%; 
     text-align: left;
     font-weight: 800;
 }
@@ -179,7 +179,7 @@ section {
     height: 2px;
     background-color: red;
     width: 15%;
-    margin-left: 5%; /* Utilizar unidades relativas para margen */
+    margin-left: 5%;
     margin-top: 5px;
     margin-bottom: 50px;
 }
@@ -193,13 +193,13 @@ section {
 .tarjeta {
     background-color: white;
     width: 100%;
-    max-width: 480px; /* Limitar ancho máximo para las tarjetas */
+    max-width: 480px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow:  4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px; /* Espacio entre tarjetas */
+    margin: 20px; 
     text-align: left;
-    flex: 1 1 calc(33.33% - 40px); /* Tres tarjetas por fila con espacio entre ellas */
+    flex: 1 1 calc(33.33% - 40px); 
 }
 
 .tarjeta img {
@@ -213,14 +213,14 @@ section {
 }
 
 .contenido-tarjeta h2 {
-    font-size: 1.5rem; /* Ajustar tamaño de fuente */
+    font-size: 1.5rem; 
     color: #333;
     font-weight: 700;
 }
 
 .contenido-tarjeta p {
     color: #777;
-    font-size: 1.2rem; /* Ajustar tamaño de fuente */
+    font-size: 1.2rem;
 }
 
 .boton {
@@ -230,7 +230,7 @@ section {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1rem; /* Ajustar tamaño de fuente */
+    font-size: 1rem; 
     font-weight: 800;
 }
 
@@ -243,39 +243,38 @@ section {
 
 @media (max-width: 1125px) {
     section {
-        padding: 10px 2%; /* Reducir padding en pantallas pequeñas */
+        padding: 10px 2%; 
     }
 
     #area1 h1 {
-        font-size: 2rem; /* Reducir tamaño de fuente en pantallas pequeñas */
+        font-size: 2rem;
         margin-left: 0;
-        text-align: center; /* Centrar el texto */
+        text-align: center; 
     }
 
     #linea-roja {
-        width: 50%; /* Aumentar el ancho de la línea roja en pantallas pequeñas */
-        margin: 10px auto; /* Centrar la línea roja */
+        width: 50%; 
+        margin: 10px auto; 
     }
 
     .tarjeta {
-        flex: 1 1 100%; /* Una tarjeta por fila en pantallas pequeñas */
-        margin: 10px 0; /* Reducir margen en pantallas pequeñas */
+        flex: 1 1 100%; 
+        margin: 10px 0; 
     }
 
     .contenido-tarjeta h2 {
-        font-size: 1.8rem; /* Ajustar tamaño de fuente */
+        font-size: 1.8rem; 
     }
 
     .contenido-tarjeta p {
-        font-size: 1.4rem; /* Ajustar tamaño de fuente */
+        font-size: 1.4rem; 
     }
 
     .boton {
-        font-size: 1.2rem; /* Ajustar tamaño de fuente */
-        padding: 10px 20px; /* Ajustar padding */
+        font-size: 1.2rem; 
+        padding: 10px 20px; 
     }
 }
-
 
 /* Área 2: Sección de horarios */
 #area2 {
@@ -303,8 +302,8 @@ section {
 /* Contenedor de horarios e imagen */
 .horarios-imagen {
     display: flex;
-    flex-wrap: wrap; /* Se adapta a pantallas pequeñas */
-    justify-content: space-between; /* Espacio entre la imagen y los horarios */
+    flex-wrap: wrap; 
+    justify-content: space-between;
     align-items: center;
     gap: 30px;
     margin: 20px 0;
@@ -314,7 +313,7 @@ section {
 /* Contenedor de los horarios */
 .horarios {
     flex: 1;
-    max-width: 50%; /* Mantiene el 50% del ancho */
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -353,14 +352,14 @@ section {
 /* Contenedor de la imagen */
 .imagen-horario {
     flex: 1;
-    max-width: 40%; /* La imagen ocupa el 40% */
+    max-width: 40%;
     text-align: right;
 }
 
 /* Imagen dentro del contenedor */
 .imagen-horario img {
     width: 100%;
-    height: auto; /* Mantiene la proporción de la imagen */
+    height: auto; 
     border-radius: 10px;
 }
 
@@ -373,12 +372,12 @@ section {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .horarios-imagen {
-        flex-direction: column; /* Apila la imagen y los horarios */
+        flex-direction: column; 
     }
 
     .horarios, .imagen-horario {
-        max-width: 100%; /* Ocupa todo el ancho */
-        text-align: center; /* Centra el contenido */
+        max-width: 100%; 
+        text-align: center;
     }
 }
 
@@ -489,32 +488,41 @@ section {
 /* Estilos responsivos */ 
 @media (max-width: 1415px) { 
     .formulario { 
-        width: 560px; /* Ocupa el 100% del ancho en pantallas medianas */ } 
+        width: 560px; 
+     } 
     .texto { 
-        padding-left: 0; /* Eliminar padding en pantallas medianas */ } 
+        padding-left: 0; 
+     } 
     .texto h1 { 
-        font-size: 3.5rem; /* Reducir el tamaño de fuente en pantallas medianas */ } } 
+        font-size: 3.5rem; 
+    } 
+} 
    
 @media (max-width: 1000px) { 
 
     .formulario { 
-        width: 560px; /* Ocupa el 100% del ancho en pantallas pequeñas */ } 
+        width: 560px; 
+    } 
     .texto { 
-        padding: 0 20px; /* Reducir padding en pantallas pequeñas */ } 
+        padding: 0 20px;
+    } 
     .texto h1 { 
-        font-size: 2.7rem; /* Reducir el tamaño de fuente en pantallas pequeñas */ } }   
+        font-size: 2.7rem; 
+    } 
+}   
 @media (max-width: 768px) { 
     #area3 { 
-        flex-direction: column; /* Cambiar a disposición en columna en pantallas pequeñas */ 
+        flex-direction: column;  
         padding: 30px 10px; } 
     .formulario-contenedor { 
-        padding: 0 10px; /* Reducir padding en pantallas muy pequeñas */ 
-        flex-direction:column; /* Cambiar a disposición en columna en pantallas pequeñas */ 
+        padding: 0 10px; 
+        flex-direction:column; 
         align-items:center; } 
     .formulario { 
-        width: 380px; /* Ocupa el 100% del ancho en pantallas muy pequeñas */ } 
+        width: 380px; 
+    } 
     .formulario .fila input { 
-        width: 100%; /* Ocupa el 100% del ancho en pantallas muy pequeñas */ 
-        margin-bottom: 10px; /* Añadir margen inferior */ 
+        width: 100%; 
+        margin-bottom: 10px; 
     } 
 }

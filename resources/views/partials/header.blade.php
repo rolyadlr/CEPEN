@@ -18,6 +18,9 @@
             <li><a href="{{route('paginaprincipal')}}#carreras profesionales">Carreras</a></li>
             <li><a href="{{route('paginaprincipal')}}#programas cortos">Programas</a></li>
             <li><a href="{{route('paginaprincipal')}}">Nosotros</a></li>
+            @if (Auth::check() && in_array(Auth::user()->rol_id, [1, 2]))
+                <li><a href="{{ route('dashboard') }}">Administración</a></li>
+            @endif
         </ul>
 
         <div class="nav-right">

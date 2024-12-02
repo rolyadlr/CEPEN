@@ -20,7 +20,7 @@ class CursoSeeder extends Seeder
         $programaExcel = Programa::where('nombre', 'Excel Empresarial')->first();
         $programaRedaccion = Programa::where('nombre', 'Redacción Ejecutiva')->first();
 
-        // Cursos para Administración Bancaria (7 cursos)
+        // Cursos para Administración Bancaria
         $cursosAdminBancaria = [
             [
                 'nombre' => 'Introducción a la Banca',
@@ -87,7 +87,7 @@ class CursoSeeder extends Seeder
             ]
         ];
 
-        // Cursos para Cajero Bancario y Comercial (6 cursos)
+        // Cursos para Cajero Bancario y Comercial
         $cursosCajero = [
             [
                 'nombre' => 'Operaciones Bancarias Básicas',
@@ -145,7 +145,7 @@ class CursoSeeder extends Seeder
             ]
         ];
 
-        // Cursos para Gestión de Negocios (5 cursos)
+        // Cursos para Gestión de Negocios
         $cursosGestionNegocios = [
             [
                 'nombre' => 'Planificación Estratégica',
@@ -194,7 +194,7 @@ class CursoSeeder extends Seeder
             ]
         ];
 
-        // Crear cursos para cada carrera
+        // Crear cursos
         foreach ($cursosAdminBancaria as $curso) {
             Curso::create(array_merge($curso, ['carrera_id' => $carreraAdminBancaria->id]));
         }
