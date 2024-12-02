@@ -55,4 +55,10 @@ class ProgramaController extends Controller
 
         return redirect()->route('programas.index')->with('success', 'Programa actualizado exitosamente');
     }
+
+    public function showPrograma($slug)
+    {
+        $programa = Programa::where('slug', $slug)->firstOrFail();
+        return view('programas.show', compact('programa'));
+    }
 }

@@ -17,7 +17,7 @@
 </header>
 <body>
     <section id="area1">
-        <h1>CURSO DE AUTOCAD</h1>
+        <h1>CURSOS DE REDACCION EJECUTIVA</h1>
         <p>Dirigido a: Estudiantes, emprendedores, adolecentes y empresarios. <br> Modalidad:PRESENCIAL- SEMIPRESENCIAL <br> {{ $programa->duracion ?? 'No hay duracion disponible para esta carrera.' }} MESES</p>
         <button type="inscripcion" class="boton-inscribirse">INSCRIBIRSE</button>
     </section>
@@ -41,10 +41,10 @@
     <section id="area2">
         <h1>¿QUE APRENDERAS?</h1>
         <div class="grid-container">
-            <p>Conocer las herramientas de manejo del software.</p>
-            <p>Mejorar la representación grafica de proyectos arquitectonicos, de ingenieria y/o diseño industrial.</p>
-            <p>Mejorar la precision en el dominio de dibujo y planos a escala en 2D.</p>
-            <p>Dominar las herramientas y comandos que ofrece el programa, tales como herramientas de dibujo y herramientas en modificacion.</p>
+            <p>Como redactar informes, correos elctronicos, propuestas y presentaciones.</p>
+            <p>Como aplicar las normas ortograficas y de redaccion.</p>
+            <p>Como dominar las tecnicas de redaccion profesional.</p>
+            <p>Como utilizar herramientas tecnologias para optimizar la productividad.</p>
         </div>
         <img src="/public/imgs/imagen_8.jpeg" alt="imagen_1">
         <p class="descripcion">
@@ -52,30 +52,30 @@
         </p>
     </section>
 
-        <section id="area3">
-            <div class="admin-actions">
-                <a href="{{ route('cursos.index') }}" class="boton-admin">Administrar Cursos</a>
-            </div>
-            <div class="cursos-titulo">Cursos Relacionados con AutoCad</div>
-    @foreach ($cursos as $curso)
-        <div class="curso" onclick="toggleDetails('detalles{{ $curso->id }}')" 
-             onmouseover="highlightDetails('detalles{{ $curso->id }}')" 
-             onmouseout="resetHighlight('detalles{{ $curso->id }}')">
-            {{ strtoupper($curso->nombre) }}
+    <section id="area3">
+        <div class="admin-actions">
+            <a href="{{ route('cursos.index') }}" class="boton-admin">Administrar Cursos</a>
         </div>
-        <div id="detalles{{ $curso->id }}" class="detalles-curso">
-            <p><strong>Descripción:</strong> {{ $curso->descripcion ?? 'No disponible' }}</p>
-            <p><strong>Duración:</strong> {{ $curso->duracion }} horas</p>
-            <p><strong>Promedio para Aprobar:</strong> {{ $curso->promedio_aprobacion }}%</p>
-            @if($curso->documento)
-                <a href="{{ asset('storage/' . $curso->documento) }}" target="_blank">Ver Horario</a>
-            @endif
-            <p><strong>Anuncios:</strong> {{ $curso->anuncios ?? 'Sin anuncios por ahora.' }}</p>
-            <p><strong>Programa:</strong> {{ $curso->programa->nombre ?? 'Sin programa asociado' }}</p>
-        </div>
-    @endforeach
+        <div class="cursos-titulo">Cursos Relacionados con Administración Bancaria</div>
+@foreach ($cursos as $curso)
+    <div class="curso" onclick="toggleDetails('detalles{{ $curso->id }}')" 
+         onmouseover="highlightDetails('detalles{{ $curso->id }}')" 
+         onmouseout="resetHighlight('detalles{{ $curso->id }}')">
+        {{ strtoupper($curso->nombre) }}
+    </div>
+    <div id="detalles{{ $curso->id }}" class="detalles-curso">
+        <p><strong>Descripción:</strong> {{ $curso->descripcion ?? 'No disponible' }}</p>
+        <p><strong>Duración:</strong> {{ $curso->duracion }} horas</p>
+        <p><strong>Promedio para Aprobar:</strong> {{ $curso->promedio_aprobacion }}%</p>
+        @if($curso->documento)
+            <a href="{{ asset('storage/' . $curso->documento) }}" target="_blank">Ver Horario</a>
+        @endif
+        <p><strong>Anuncios:</strong> {{ $curso->anuncios ?? 'Sin anuncios por ahora.' }}</p>
+        <p><strong>Programa:</strong> {{ $curso->programa->nombre ?? 'Sin programa asociado' }}</p>
+    </div>
+@endforeach
 </section>
-    
+    <script src="/public/js/cursoscortos.js"></script>
     <footer>
     @include('partials/footer')
 </footer>

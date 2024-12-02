@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Illuminate\Support\Str;
 class Carrera extends Model
 {
     protected $table = 'carreras';
@@ -16,5 +16,15 @@ class Carrera extends Model
         return $this->hasMany(Curso::class, 'carrera_id');
         
     }
+
+    protected static function boot()
+{
+    parent::boot();
+
+    static::saving(function ($model) {
+        $model->slug = Str::slug($model->nombre);
+    });
+}
+
 
 }

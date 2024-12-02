@@ -1,7 +1,7 @@
 <x-app-layout>
     @section('content')
     <div class="container mt-6">
-        <h1>Editar Curso</h1>
+        <p class="h1 text-center">Editar Curso</p>
         
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -18,34 +18,34 @@
             @method('PUT')
     
             <div class="form-group">
-                <label for="nombre">Nombre del Curso</label>
+                <label class="h4 text-center" for="nombre">Nombre del Curso</label>
                 <input type="text" name="nombre" class="form-control" value="{{ $curso->nombre }}">
             </div>
             <div class="form-group">
-                <label for="descripcion">Descripción</label>
-                <textarea name="descripcion" class="form-control">{{ $curso->descripcion }}</textarea>
+                <label class="h4 text-center" for="descripcion">Descripción</label>
+                <textarea type="text" name="descripcion" class="form-control">{{ $curso->descripcion }}</textarea>
             </div>
             <div class="form-group">
-                <label for="duracion">Duración (horas)</label>
+                <label class="h4 text-center" for="duracion">Duración (horas)</label>
                 <input type="number" name="duracion" class="form-control" value="{{ $curso->duracion }}">
             </div>
             <div class="form-group">
-                <label for="promedio_aprobacion">Promedio de Aprobación (%)</label>
+                <label class="h4 text-center" for="promedio_aprobacion">Promedio de Aprobación (%)</label>
                 <input type="number" name="promedio_aprobacion" class="form-control" value="{{ $curso->promedio_aprobacion }}">
             </div>
             <div class="form-group">
-                <label for="horario">Horario</label>
-                <input type="file" name="horario" class="form-control">
+                <label class="h4 text-center" for="horario">Horario</label>
+                <input type="file" name="horario" class="form-control mb-3">
                 @if ($curso->documento)
-                    <a href="{{ Storage::url($curso->documento) }}" target="_blank">Ver horario actual</a>
+                    <p class="h4 btn btn-secondary btn-sm"><a href="{{ Storage::url($curso->documento) }}" target="_blank">Ver horario actual</a> </p>
                 @endif
             </div>
             <div class="form-group">
-                <label for="anuncios">Anuncios</label>
+                <label class="h4 text-center" for="anuncios">Anuncios</label>
                 <textarea name="anuncios" class="form-control">{{ $curso->anuncios }}</textarea>
             </div>
             <div class="form-group">
-                <label for="programa_id">Programa</label>
+                <label class="h4 text-center" for="programa_id">Programa</label>
                 <select name="programa_id" class="form-control">
                     <option value="">Seleccione un programa</option>
                     @foreach($programas as $programa)
@@ -54,7 +54,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="carrera_id">Carrera</label>
+                <label class="h4 text-center" for="carrera_id">Carrera</label>
                 <select name="carrera_id" class="form-control">
                     <option value="">Seleccione una carrera</option>
                     @foreach($carreras as $carrera)

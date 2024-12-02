@@ -54,5 +54,11 @@ class CarreraController extends Controller
 
         return redirect()->route('carreras.index')->with('success', 'Carrera actualizada exitosamente');
     }
+
+    public function showCarrera($slug)
+    {
+        $carrera = Carrera::where('slug', $slug)->firstOrFail();
+        return view('carreras.show', compact('carrera'));
+    }
     
 }

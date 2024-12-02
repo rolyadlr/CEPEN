@@ -1,20 +1,23 @@
+// /public/js/cursosprofesionales.js
+console.log("Script loaded");
+
 function toggleDetails(id) {
-    var details = document.getElementById(id);
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
+    const detalles = document.getElementById(id);
+    if (detalles.style.display === "none" || !detalles.style.display) {
+        detalles.style.display = "block";
     } else {
-        details.style.display = "none";
+        detalles.style.display = "none";
     }
 }
 
 function highlightDetails(id) {
-    var details = document.getElementById(id);
-    details.classList.add("highlighted");
+    const detalles = document.getElementById(id);
+    detalles.style.backgroundColor = "#f0f8ff";
 }
 
 function resetHighlight(id) {
-    var details = document.getElementById(id);
-    details.classList.remove("highlighted");
+    const detalles = document.getElementById(id);
+    detalles.style.backgroundColor = "";
 }
 
 // Función para mostrar el formulario emergente

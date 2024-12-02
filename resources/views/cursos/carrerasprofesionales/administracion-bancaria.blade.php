@@ -17,8 +17,9 @@
 </header>
 <body>
     <section id="area1">
-        <h1>CURSO DE AUTOCAD</h1>
-        <p>Dirigido a: Estudiantes, emprendedores, adolecentes y empresarios. <br> Modalidad:PRESENCIAL- SEMIPRESENCIAL <br> {{ $programa->duracion ?? 'No hay duracion disponible para esta carrera.' }} MESES</p>
+        <h1>ADMINISTRACION BANCARIA</h1>
+        <p>Dirigido a: Estudiantes, emprendedores, adolecentes y empresarios. <br> Modalidad:PRESENCIAL- SEMIPRESENCIAL <br> 
+            {{ $carrera->duracion ?? 'No hay duracion disponible para esta carrera.' }} MESES</p>
         <button type="inscripcion" class="boton-inscribirse">INSCRIBIRSE</button>
     </section>
 <!-- Formulario emergente -->
@@ -40,15 +41,16 @@
 </div>
     <section id="area2">
         <h1>¿QUE APRENDERAS?</h1>
+
         <div class="grid-container">
-            <p>Conocer las herramientas de manejo del software.</p>
-            <p>Mejorar la representación grafica de proyectos arquitectonicos, de ingenieria y/o diseño industrial.</p>
-            <p>Mejorar la precision en el dominio de dibujo y planos a escala en 2D.</p>
-            <p>Dominar las herramientas y comandos que ofrece el programa, tales como herramientas de dibujo y herramientas en modificacion.</p>
+            <p>Desarrolla habilidades técnicas y persoanles como comunicación, lidereazgo y creatividad.</p>
+            <p>Realizar Operaciones administrativas y comerciales en banca y finanzas.</p>
+            <p>Participa en la transformación digital financiera.</p>
+            <p>Analizar los resultados de la intermediación financiera.</p>
         </div>
         <img src="/public/imgs/imagen_8.jpeg" alt="imagen_1">
         <p class="descripcion">
-            {{ $programa->descripcion ?? 'No hay descripción disponible para esta carrera.' }}
+            {{ $carrera->descripcion ?? 'No hay descripción disponible para esta carrera.' }}
         </p>
     </section>
 
@@ -56,7 +58,7 @@
             <div class="admin-actions">
                 <a href="{{ route('cursos.index') }}" class="boton-admin">Administrar Cursos</a>
             </div>
-            <div class="cursos-titulo">Cursos Relacionados con AutoCad</div>
+            <div class="cursos-titulo">Cursos Relacionados con Administración Bancaria</div>
     @foreach ($cursos as $curso)
         <div class="curso" onclick="toggleDetails('detalles{{ $curso->id }}')" 
              onmouseover="highlightDetails('detalles{{ $curso->id }}')" 
@@ -75,10 +77,11 @@
         </div>
     @endforeach
 </section>
+        <footer>
+        @include('partials/footer')
+        </footer>
+    <script src="/resources/js/cursosprofesionales.js"></script>
     
-    <footer>
-    @include('partials/footer')
-</footer>
-<script src="/resources/js/cursoscortos.js"></script>
-</body>
-</html>
+    </body>
+    </html>
+    

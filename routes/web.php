@@ -16,15 +16,27 @@ Route::post('/solicitar-informacion', [SolicitudController::class, 'procesarForm
 // **Rutas públicas**
 Route::get('/', [HomeController::class, 'index'])->name('paginaprincipal');
 
+Route::get('/carreras/{slug}', [CursoController::class, 'showCarrera'])->name('carreras.show');
+Route::get('/programa/{slug}', [CursoController::class, 'showPrograma'])->name('programas.show');
+
 // carreras profesionales
-Route::get('/curso/CajeroBancario', [carreraprofesional::class, 'CajeroBancario'])->name('CajeroBancario');
-Route::get('/curso/AdministracionBancaria', [carreraprofesional::class, 'AdministracionBancaria'])->name('AdministracionBancaria');
-Route::get('/curso/GestiondeNegocios', [carreraprofesional::class, 'GestiondeNegocios'])->name('GestiondeNegocios');
+/*Route::get('/curso/cajero-bancario-y-comercial', [carreraprofesional::class, 'cajero-bancario-y-comercial'])->name('cajero-bancario-y-comercial');*/
+Route::get('/curso/CajeroBancario', [CursoController::class, 'cajeroBancario'])->name('CajeroBancario');
+/*Route::get('/curso/AdministracionBancaria', [carreraprofesional::class, 'AdministracionBancaria'])->name('AdministracionBancaria');*/
+Route::get('/curso/AdministracionBancaria', [CursoController::class, 'administracionBancaria'])->name('AdministracionBancaria');
+/*Route::get('/curso/GestiondeNegocios', [carreraprofesional::class, 'GestiondeNegocios'])->name('GestiondeNegocios');*/
+Route::get('/curso/GestiondeNegocios', [CursoController::class, 'GestiondeNegocios'])->name('GestiondeNegocios');
 
 // Cursos cortos (programas)
-Route::get('/curso/AutoCad', [programas::class, 'AutoCad'])->name('AutoCad');
-Route::get('/curso/ExelEmpresarial', [programas::class, 'ExelEmpresarial'])->name('ExelEmpresarial');
-Route::get('/curso/RedaccionEjecutiva', [programas::class, 'RedaccionEjecutiva'])->name('RedaccionEjecutiva');
+/*Route::get('/curso/AutoCad', [programas::class, 'AutoCad'])->name('AutoCad');*/
+Route::get('/curso/AutoCad', [CursoController::class, 'AutoCad'])->name('AutoCad');
+/*Route::get('/curso/ExelEmpresarial', [programas::class, 'ExelEmpresarial'])->name('ExelEmpresarial');*/
+Route::get('/curso/ExelEmpresarial', [CursoController::class, 'ExelEmpresarial'])->name('ExelEmpresarial');
+/*Route::get('/curso/RedaccionEjecutiva', [programas::class, 'RedaccionEjecutiva'])->name('RedaccionEjecutiva');*/
+Route::get('/curso/RedaccionEjecutiva', [CursoController::class, 'RedaccionEjecutiva'])->name('RedaccionEjecutiva');
+
+
+
 
 // **Rutas protegidas para admin y docente**
 Route::middleware(['auth', 'checkrole:admin,docente'])->group(function () {

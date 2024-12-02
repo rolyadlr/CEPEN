@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEPEN</title>
     <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 <header>
     <nav class="navbar">
         <div class="logo">
-            <a href="{{ route('paginaprincipal')}}"><img src="{{ asset('/imgs/CEPEN_logo.png') }}" alt="CEPEN Logo"></a>
+            <a href="{{ route('paginaprincipal') }}"><img src="{{ asset('/imgs/CEPEN_logo.png') }}" alt="CEPEN Logo"></a>
         </div>
+
+        <ul class="nav-menu">
+            <li><a href="{{route('paginaprincipal')}}#carreras profesionales">Carreras</a></li>
+            <li><a href="{{route('paginaprincipal')}}#programas cortos">Programas</a></li>
+            <li><a href="{{route('paginaprincipal')}}">Nosotros</a></li>
+        </ul>
 
         <div class="nav-right">
             <div class="menu-icon" onclick="toggleMenu()">
@@ -19,12 +26,6 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-
-            <ul class="nav-menu">
-                <li><a href="{{route('paginaprincipal')}}#carreras profesionales">Carreras</a></li>
-                <li><a href="{{route('paginaprincipal')}}#programas cortos">Programas</a></li>
-                <li><a href="{{route('paginaprincipal')}}">Nosotros</a></li>
-            </ul>
 
             <div class="auth-buttons">
                 @guest
@@ -35,7 +36,7 @@
                 @auth
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ Auth::user()->name }}
+                            <i class="fas fa-user"></i> {{ Auth::user()->name }}
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a>
@@ -49,21 +50,12 @@
             </div>
         </div>
     </nav>
-
-    <!-- Menú móvil -->
-    <ul class="nav-menu mobile">
-        <li><a href="{{route('paginaprincipal')}}#carreras profesionales">Carreras</a></li>
-        <li><a href="{{route('paginaprincipal')}}#programas cortos">Programas</a></li>
-        <li><a href="{{route('paginaprincipal')}}">Nosotros</a></li>
-    </ul>
 </header>
 <script src="/public/js/header.js"></script>
 <script>
     function toggleMenu() {
         const menu = document.querySelector('.nav-menu');
-        const mobileMenu = document.querySelector('.nav-menu.mobile');
         menu.classList.toggle('show');
-        mobileMenu.classList.toggle('show');
     }
 </script>
 </body>

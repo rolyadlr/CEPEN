@@ -13,6 +13,7 @@ class CreateCarrerasTable extends Migration
             $table->string('nombre', 100);
             $table->text('descripcion')->nullable();
             $table->integer('duracion');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

@@ -46,6 +46,15 @@ body {
     background-color: #9fce52;
 }
 
+#area1, #area2, #area3 {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 /* AREA 2 ¿QUE APRENDERAS? */
 #area2 {
     background-color: white;

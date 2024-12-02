@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
             CarreraSeeder::class,
             ProgramaSeeder::class,
             RolesAndPermissionsSeeder::class,
-            UsuarioSeeder::class,
+            usuarioSeeder::class,
             CursoSeeder::class
         ]);
     }
