@@ -167,7 +167,7 @@ class CursoController extends Controller
         }
 
         // Pasar el programa y los cursos relacionados a la vista
-        return view('cursos.programas.autocad', [
+        return view('cursos.programas.AutoCad', [
             'programa' => $programa,
             'cursos' => $programa->cursos
         ]);
