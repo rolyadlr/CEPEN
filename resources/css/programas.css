@@ -1,0 +1,267 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    background-color: #ffffff;
+}
+
+/* AREA 1 TITULO DE CURSO */
+#area1 {
+    background-color: #1e88e5;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#area1 h1 {
+    font-size: 4vw;
+    color: black;
+}
+
+#area1 p {
+    font-size: 1.5vw;
+    color: #f0f0f0;
+    line-height: 1.75;
+}
+
+#area1 button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 15px 75px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+#area1 button:hover {
+    background-color: #9fce52;
+}
+
+#area1, #area2, #area3 {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* AREA 2 ¿QUE APRENDERAS? */
+#area2 {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#area2 h1 {
+    font-size: 45px;
+    color: black;
+}
+
+#area2 p {
+    font-size: 1.5vw;
+    padding-bottom: 30px;
+    line-height: 1.5;
+}
+
+#area2 .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 50px;
+    font-size: 50px;
+}
+
+#area2 .grid-container p{
+    font-size: 30px;
+}
+
+#area2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+#area2 .descripcion {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1;
+}
+
+/* AREA 3 CURSOS */
+#area3 {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.cursos-titulo {
+    background-color: #ee202e;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 2vw;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.detalles-curso {
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 1.2vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.highlighted {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+.curso {
+    background-color: #ffe456;
+    color: black;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.5vw;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: bolder;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.curso:hover {
+    background-color: #ff6666;
+}
+
+.curso:active {
+    background-color: #ff3333;
+}
+.formulario-contenedor {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+.admin-actions {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.boton-admin {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.boton-admin:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Media Queries */
+@media (max-width: 1100px) {
+    #area1, #area2, #area3 {
+        width: 90%;
+    }
+
+    #area1 h1, #area2 h1, .cursos-titulo {
+        font-size: 4vw;
+    }
+
+    #area1 p, #area2 p, #area2 .descripcion, .curso {
+        font-size: 3vw;
+    }
+
+    #area1 button {
+        font-size: 2vw;
+        padding: 10px 50px;
+    }
+
+    #area2 .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px 0px;
+    }
+    .detalles-curso {
+        font-size: 3vw;
+        padding: 15px;
+    }
+
+    .curso {
+        font-size: 3vw;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #area1, #area2, #area3 {
+        width: 90%;
+    }
+
+    #area1 h1, #area2 h1, .cursos-titulo {
+        font-size: 5vw;
+    }
+
+    #area1 p, #area2 p, #area2 .descripcion, .curso {
+        font-size: 4vw;
+    }
+
+    #area1 button {
+        font-size: 3vw;
+        padding: 10px 50px;
+    }
+
+    #area2 .grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px 0px;
+    }
+    #area2 .grid-container p{
+        font-size: 4vw;
+    }
+    .detalles-curso {
+        font-size: 3.5vw;
+        padding: 15px;
+    }
+
+    .curso {
+        font-size: 4vw;
+        padding: 10px;
+        border-radius: 20px;
+    }
+}

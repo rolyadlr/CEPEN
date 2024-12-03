@@ -6,6 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     protected $table = 'cursos';
+    protected $fillable = [
+        'nombre', 
+        'descripcion', 
+        'duracion', 
+        'programa_id', 
+        'carrera_id', 
+        'promedio_aprobacion', 
+        'documento', 
+        'anuncios'
+    ];
 
     // Un curso puede pertenecer a un programa
     public function programa()
@@ -30,11 +40,7 @@ class Curso extends Model
     {
         return $this->hasMany(Inscripcion::class, 'curso_id');
     }
+    
 
-    // Un curso tiene muchos subcursos
-    public function subcursos()
-    {
-        return $this->hasMany(Subcurso::class, 'curso_id');
-    }
 }
 

@@ -35,4 +35,15 @@ class Usuario extends Authenticatable
     {
         return $this->belongsTo(Rol::class, 'rol_id');
     }
+
+    public function tieneRol($roles)
+{
+    if (is_array($roles)) {
+        return in_array($this->rol->nombre, $roles);
+    }
+    return $this->rol->nombre === $roles;
+}
+
+
+
 }

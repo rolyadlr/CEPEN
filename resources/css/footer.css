@@ -1,0 +1,119 @@
+/* Reset y estilo general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo y título */
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#logo {
+    width: 120px;
+}
+
+.logo-section h2 {
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.phrase p {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0;
+    max-width: 90%; 
+}
+
+/* Información de contacto */
+.contact-info {
+    font-size: 16px;
+    text-align: center;
+}
+
+#ubicacion, #email {
+    margin: 5px 0;
+    font-weight: lighter;
+}
+
+/* Iconos sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Copyright */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+    opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .logo-section, .phrase, .contact-info, .social-icons {
+        flex: 1;
+    }
+
+    .logo-section {
+        align-items: flex-start;
+    }
+
+    .phrase p {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    #logo {
+        width: 100px;
+    }
+
+    .phrase p {
+        font-size: 18px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}

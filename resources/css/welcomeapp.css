@@ -1,0 +1,528 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+}
+
+.carousel-caption-static {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align:start;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 10; 
+}
+
+.carousel-caption-static h5 {
+    font-size: 3.5rem;
+    font-weight:800;
+    color:red;
+}
+
+.carousel-caption-static p {
+    font-size: 1.4rem;
+    color: white;
+    font-weight:200;
+}
+
+.style{
+    background-color: #FFC107;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.btn-warning:hover {
+    background-color: #E0A800;
+}
+@media (max-width: 1125px) {
+    .carousel-caption-static h5 {
+        font-size: 3vw;
+    }
+
+    .carousel-caption-static p {
+        font-size: 2vw; 
+    }
+
+    .style {
+        font-size: 1rem; 
+        padding: 4px 8px; 
+    }
+
+    .carousel-caption-static {
+        padding: 7px; 
+    }
+}
+
+@media (max-width: 412px) {
+    .carousel-caption-static h5 {
+        font-size: 4vw;
+    }
+
+    .carousel-caption-static p {
+        font-size: 2vw; 
+    }
+
+    .style {
+        font-size: 0.9rem;
+        padding: 4px 8px; 
+    }
+
+    .carousel-caption-static {
+        padding: 10px; 
+    }
+}
+.beneficios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D32F2F;
+    padding: 70px 5%;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.beneficios-item {
+    text-align: center;
+    color: white;
+    flex: 1 1 23%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    margin: 10px 0;
+}
+
+.beneficios-item img {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1); 
+}
+
+.beneficios-item h3 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.beneficios-item .highlight {
+    color: #FFD700; 
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1125px) {
+    .beneficios-item {
+        flex: 1 1 48%; /* Dos ítems por fila en pantallas medianas */
+    }
+
+    .beneficios-item img {
+        width: 70px; /* Ajustar el tamaño de los íconos */
+    }
+
+    .beneficios-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .beneficios-item .highlight {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 412px) {
+    .beneficios-item {
+        flex: 1 1 100%; /* Un ítem por fila en pantallas pequeñas */
+    }
+
+    .beneficios-item img {
+        width: 60px; /* Ajustar el tamaño de los íconos */
+    }
+
+    .beneficios-item h3 {
+        font-size: 1rem;
+    }
+
+    .beneficios-item .highlight {
+        font-size: 1rem;
+    }
+}
+
+
+section {
+    padding: 20px 5%; 
+    margin: 20px 0;
+}
+
+#area1 h1 {
+    color: red;
+    font-size: 2.5rem;
+    margin-left: 5%; 
+    text-align: left;
+    font-weight: 800;
+}
+
+#linea-roja{
+    height: 2px;
+    background-color: red;
+    width: 15%;
+    margin-left: 5%;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.carreras, .programas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow:  4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px; 
+    text-align: left;
+    flex: 1 1 calc(33.33% - 40px); 
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 25px;
+}
+
+.contenido-tarjeta h2 {
+    font-size: 1.5rem; 
+    color: #333;
+    font-weight: 700;
+}
+
+.contenido-tarjeta p {
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem; 
+    font-weight: 800;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1200px) {
+    .tarjeta {
+        flex: 1 1 calc(50% - 40px); /* Dos tarjetas por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 1125px) {
+    section {
+        padding: 10px 2%; 
+    }
+
+    #area1 h1 {
+        font-size: 2rem;
+        margin-left: 0;
+        text-align: center; 
+    }
+
+    #linea-roja {
+        width: 50%; 
+        margin: 10px auto; 
+    }
+
+    .tarjeta {
+        flex: 1 1 100%; 
+        margin: 10px 0; 
+    }
+
+    .contenido-tarjeta h2 {
+        font-size: 1.8rem; 
+    }
+
+    .contenido-tarjeta p {
+        font-size: 1.4rem; 
+    }
+
+    .boton {
+        font-size: 1.2rem; 
+        padding: 10px 20px; 
+    }
+}
+
+/* Área 2: Sección de horarios */
+#area2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Título de la sección */
+#area2 h1 {
+    color: red;
+    font-size: 32px;
+    font-weight: 800;
+    margin-left: 20px;
+    text-align: left;
+}
+
+/* Línea roja debajo del título */
+#linea-roja {
+    height: 2px;
+    background-color: red;
+    width: 15%;
+    margin: 5px 0 20px 20px;
+}
+
+/* Contenedor de horarios e imagen */
+.horarios-imagen {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+/* Contenedor de los horarios */
+.horarios {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Caja de cada horario individual */
+.horario {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo del título de cada horario */
+.horario h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Texto descriptivo del horario */
+.horario p {
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Texto adicional en el horario */
+.horario span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Contenedor de la imagen */
+.imagen-horario {
+    flex: 1;
+    max-width: 40%;
+    text-align: right;
+}
+
+/* Imagen dentro del contenedor */
+.imagen-horario img {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px;
+}
+
+/* Colores personalizados */
+#rojo { color: #e74c2c; }
+#amarillo { color: #f6b900; }
+#celeste { color: #5293d0; }
+#verde { color: #9fce52; }
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .horarios-imagen {
+        flex-direction: column; 
+    }
+
+    .horarios, .imagen-horario {
+        max-width: 100%; 
+        text-align: center;
+    }
+}
+
+/* Área 3: Solicita Información */
+#area3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 10px;
+    background: linear-gradient(to bottom, #ffc30b, #ffe557);
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.formulario-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.formulario {
+    background-color: #e53e3e;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 50%;
+}
+
+.formulario h2 {
+    color: #373737;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1;
+    padding: 5px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+}
+
+.formulario .fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulario .fila input {
+    width: 45%;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    margin: 0;
+    padding: 10px;
+}
+
+.checkbox input {
+    margin-right: 310px;
+
+}
+.checkbox label{
+    color: #333333; 
+    text-align: left;
+}
+
+.boton-enviar {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/*texto lateral */
+.texto {
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.texto h1 {
+    font-size: 65px;
+    font-weight: bold;
+    color: black;
+    line-height: 1;
+}
+
+.texto .futuro {
+    color: #ffffff;
+}
+
+.texto .mercado {
+    color: red;
+}
+/* Estilos responsivos */ 
+@media (max-width: 1415px) { 
+    .formulario { 
+        width: 560px; 
+     } 
+    .texto { 
+        padding-left: 0; 
+     } 
+    .texto h1 { 
+        font-size: 3.5rem; 
+    } 
+} 
+   
+@media (max-width: 1000px) { 
+
+    .formulario { 
+        width: 560px; 
+    } 
+    .texto { 
+        padding: 0 20px;
+    } 
+    .texto h1 { 
+        font-size: 2.7rem; 
+    } 
+}   
+@media (max-width: 768px) { 
+    #area3 { 
+        flex-direction: column;  
+        padding: 30px 10px; } 
+    .formulario-contenedor { 
+        padding: 0 10px; 
+        flex-direction:column; 
+        align-items:center; } 
+    .formulario { 
+        width: 380px; 
+    } 
+    .formulario .fila input { 
+        width: 100%; 
+        margin-bottom: 10px; 
+    } 
+}
